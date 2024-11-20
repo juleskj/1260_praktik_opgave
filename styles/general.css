@@ -56,10 +56,10 @@ h4,
 h5,
 h6,
 lh {
-  color: var(--black);
-  font-family: "Cabin", sans-serif;
   font-style: normal;
-  font-weight: 600;
+
+  font-weight: 400;
+  font-family: "DM Serif Display", serif;
   &::first-letter {
     text-transform: capitalize;
   }
@@ -67,28 +67,22 @@ lh {
 
 h1 {
   font-size: var(--fluid-h1);
-  font-family: "Asap", sans-serif;
 }
 h2 {
   font-size: var(--fluid-h2);
-  font-family: "Source Code Pro", monospace;
 }
 h3 {
   font-size: var(--fluid-h3);
-  font-family: "Source Code Pro", monospace;
 }
 h4 {
   font-size: var(--fluid-h4);
-  font-family: "Source Code Pro", monospace;
 }
 h5 {
   font-size: var(--fluid-h5);
-  font-family: "Source Code Pro", monospace;
 }
 h6,
 lh {
   font-size: var(--fluid-h6);
-  font-family: "Source Code Pro", monospace;
 }
 
 p {
@@ -98,11 +92,11 @@ p {
 p,
 ul,
 ol {
-  font-family: "Anaheim", sans-serif;
-  color: var(--black);
+  font-family: "Poppins", sans-serif;
+
   font-size: var(--fluid-p);
   font-style: normal;
-  font-weight: 500;
+  font-weight: 400;
   --flow-space: 0.5em;
 }
 
@@ -151,7 +145,7 @@ button {
 
 header {
   background: var(--hvid);
-  padding: var(--even-p-m) 0;
+  padding: var(--even-p-xs) 0;
 }
 
 nav {
@@ -208,6 +202,24 @@ main {
   background: var(--gul);
 }
 
+/* hero */
+.hero-img {
+  background: url("/images/topbillede.jpg");
+  background: no-repeat contain;
+  height: 90vh;
+
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  & div {
+    color: var(--hvid);
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+    gap: 1rem;
+  }
+}
+
 /* footer */
 
 footer {
@@ -220,6 +232,8 @@ footer {
 button {
   text-wrap: nowrap;
   text-transform: uppercase;
+  width: fit-content;
+  height: fit-content;
 
   border-radius: var(--border-radius);
   padding: 10px var(--even-p-s);
@@ -237,4 +251,7 @@ button {
 .btn-hvid {
   background: var(--hvid);
   color: var(--sort);
+  &:is(:hover, :focus) {
+    outline: var(--hvid) 2px solid;
+  }
 }
