@@ -1,5 +1,5 @@
 :root {
-  --content-width: min(1000px, 100% - 1rem * 2);
+  --content-width: min(1300px, 100% - 1rem * 2);
   --full-width: minmax(1rem, 1fr);
   --feature-width: minmax(0, 2rem);
   --flow-space: 0.5rlh;
@@ -172,11 +172,22 @@ nav {
     & li {
       list-style-type: none;
 
-      border: 1px solid blue;
       width: fit-content;
       & a {
-        border: 1px solid blue;
         text-decoration: none;
+        text-transform: capitalize;
+
+        border-radius: var(--border-radius);
+        padding: 5px var(--even-p-xs);
+
+        color: var(--sort);
+        border-radius: var(--border-radius);
+
+        &:is(:hover, :focus) {
+          transition: 200ms;
+          outline-offset: 2px;
+          outline: var(--sort) 2px solid;
+        }
       }
     }
   }
@@ -207,6 +218,7 @@ footer {
 /* button */
 
 button {
+  text-wrap: nowrap;
   text-transform: uppercase;
 
   border-radius: var(--border-radius);
