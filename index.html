@@ -18,7 +18,7 @@
     <header>
 
         <nav>
-            <img src="/images/rooster-logo.png" alt="" width="50" height="50">
+            <a href="#"> <img src="/images/rooster-logo.png" alt="" width="50" height="50"></a>
             <ul>
                 <li><a href="#">menupunkt#1</a></li>
                 <li><a href="#">menupunkt#2</a></li>
@@ -41,42 +41,150 @@
             </div>
 
         </section>
-        <section>
+        <section class="kontakt-container">
             <h2>pursuit of excellence</h2>
             <p>The idea of “form follows function,” a principle associated with the modernist design movement, was the
                 starting place for our Voda collection. Its classic geometry and clean finishes unite into an industrial
                 modern style, crafted for Australian living.</p>
-            <button>kontakt os</button>
-        </section>
-        <section>
-            <img src="/images/splitsektion-1.jpg" alt="">
-            <h2>pursuit of excellence</h2>
-            <p>Sammen med vores kunder og den samlede viden fra vores 18.500 arkitekter, ingeniører og øvrige
-                specialister skaber vi løsninger, der adresserer urbanisering, griber digitaliseringens muligheder og
-                gør vores byer og samfund mere bæredygtige.
-                <br>
-                Transforming Society Together.
-            </p>
             <button class="btn-sort">kontakt os</button>
         </section>
-        <section>
+        <div class="full-bleed">
+            <section class="flex-1-1 align-center">
+                <img src="/images/splitsektion-1.jpg" alt="">
+                <article>
+                    <h2>pursuit of excellence</h2>
+                    <p>Sammen med vores kunder og den samlede viden fra vores 18.500 arkitekter, ingeniører og øvrige
+                        specialister skaber vi løsninger, der adresserer urbanisering, griber digitaliseringens
+                        muligheder
+                        og
+                        gør vores byer og samfund mere bæredygtige.
+                        <br>
+                        Transforming Society Together.
+                    </p>
+                    <button class="btn-sort">kontakt os</button>
+                </article>
+            </section>
+        </div>
+        <div class="full-bleed-image-container ydelser-container">
 
-        </section>
+            <div><img src="/images/ydelser.jpg" alt="">
+                <h2>ydelser</h2>
+            </div>
+            <div><img src="/images/service.jpg" alt="">
+                <h2>service</h2>
+            </div>
+            <div><img src="/images/kontaktos.jpg" alt="">
+                <h2>kontakt os</h2>
+            </div>
 
-        <section>
-            <img src="/images/splitsektion-2.jpg" alt="">
-            <h2>moddern refinement</h2>
-            <p>Sammen med vores kunder og den samlede viden fra vores 18.500 arkitekter, ingeniører og øvrige
-                specialister skaber vi løsninger, der adresserer urbanisering, griber digitaliseringens muligheder og
-                gør vores byer og samfund mere bæredygtige.
-                <br>
-                Transforming Society Together.
-            </p>
-            <button class="btn-sort">kontakt os</button>
-        </section>
+        </div>
+        <div class="full-bleed">
+            <section class="flex-1-1 reverse align-center">
+                <img src="/images/splitsektion-2.jpg" alt="">
+                <article>
+                    <h2>moddern refinement</h2>
+                    <p>Sammen med vores kunder og den samlede viden fra vores 18.500 arkitekter, ingeniører og øvrige
+                        specialister skaber vi løsninger, der adresserer urbanisering, griber digitaliseringens
+                        muligheder
+                        og
+                        gør vores byer og samfund mere bæredygtige.
+                        <br>
+                        Transforming Society Together.
+                    </p>
+                    <button class="btn-sort">kontakt os</button>
+                </article>
+            </section>
+        </div>
+
+        <div class="flex-1-1">
+            <section>
+                <h2>get in touch</h2>
+                <p><strong>We are awwwards and we are here to serve! <br> How can we help you?
+
+                    </strong></p>
+                <p>
+                    If you have any questions, please contact us through this form.
+                    <br>
+                    Please complete the following fields.
+                </p>
+            </section>
+            <form>
+
+                <input type="text" name="f-name" id="f-name" placeholder="dit navn*">
+                <input type="number" name="tlf" id="tlf" placeholder="telefonnummer*">
+                <input type="email" name="email" id="email" placeholder="din email*">
+                <textarea id="message" name="message" rows="2" cols="5">Eventuel besked*
+                    </textarea>
+                <button type="submit" class="btn-sort">kontakt os</button>
+
+            </form>
+        </div>
+
     </main>
     <footer>
-        <div>hi</div>
+        <nav>
+            <section>
+                <h4>find os her</h4>
+                <ul>
+
+                    <li>
+                        Rooster Fried Chicken<br>
+                        Firmavej 109 <br>
+                        2300 Firmaby
+                    </li>
+                    <li>Tlf.: +45 12 34 56 78 <br> Mail: info@roosterfried.dk</li>
+
+                    <li>
+                        <strong>Åbningstider</strong> <br>
+                        Mandag – fredag: 10.00 – 17.30 <br>
+                        Lørdag: 10.00 – 15.00
+                    </li>
+                    <li>
+                        <img src="/images/facebook-ikon-hvid.png" alt="">
+                        <img src="/images/instagram-ikon-hvid.png" alt="">
+                        <img src="/images/pinterest-ikon-hvid.png" alt="">
+                        <img src="/images/linkedin-ikon-hvid.png" alt="">
+                    </li>
+                </ul>
+            </section>
+
+            <section>
+                <h4>information</h4>
+                <ul>
+                    <li><a href="#">Om Rooster</a></li>
+                    <li><a href="#">Kataloger & film</a></li>
+                    <li><a href="#">Kunde guide</a></li>
+                    <li><a href="#">Opskrifter</a></li>
+                    <li><a href="#">Presse</a></li>
+                    <li><a href="#">Karriere</a></li>
+                </ul>
+            </section>
+
+            <section>
+                <h4>about</h4>
+                <ul>
+                    <li><a href="#">about us</a></li>
+                    <li><a href="#">careers</a>
+                    </li>
+                    <li><a href="#">terms of secrive</a></li>
+                    <li><a href="#">refund policy</a></li>
+                    <li><a href="#">help center</a></li>
+                </ul>
+            </section>
+
+            <section>
+                <h4>shop</h4>
+                <ul>
+                    <li>joices</li>
+                    <li>Supplements</li>
+                    <li>Pantry</li>
+                    <li>Locations</li>
+                    <li>Order Ahead</li>
+                    <li>Terms of Service</li>
+                    <li>Refund policy</li>
+                </ul>
+            </section>
+        </nav>
     </footer>
 </body>
 

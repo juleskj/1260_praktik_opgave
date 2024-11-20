@@ -38,4 +38,8 @@ full bleed men deres content, som tekst skal være inde i content */
       grid-column: content;
     }
   }
+
+  .full-bleed-image-container {
+    grid-column: full;
+  }
 }
