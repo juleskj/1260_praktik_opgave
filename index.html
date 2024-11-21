@@ -18,7 +18,7 @@
     <header>
 
         <nav>
-            <a href="#"> <img src="/images/rooster-logo.png" alt="" width="50" height="50"></a>
+            <a class="logo" href="#"> <img src="/images/rooster-logo.png" alt="rooster logo" width="50" height="50"></a>
             <ul>
                 <li><a href="#">menupunkt#1</a></li>
                 <li><a href="#">menupunkt#2</a></li>
@@ -50,7 +50,7 @@
         </section>
         <div class="full-bleed">
             <section class="flex-1-1 align-center">
-                <img src="/images/splitsektion-1.jpg" alt="">
+                <img src="/images/splitsektion-1.jpg" alt="billede af en bølge ved strand kanten set oppefra">
                 <article>
                     <h2>pursuit of excellence</h2>
                     <p>Sammen med vores kunder og den samlede viden fra vores 18.500 arkitekter, ingeniører og øvrige
@@ -66,16 +66,16 @@
             </section>
         </div>
         <div class="full-bleed-image-container ydelser-container">
-
-            <div><img src="/images/ydelser.jpg" alt="">
+            <a href="#"><img src="/images/ydelser.jpg" alt="billede af klipper i havet">
                 <h2>ydelser</h2>
-            </div>
-            <div><img src="/images/service.jpg" alt="">
+            </a>
+
+            <a href="#"><img src="/images/service.jpg" alt=" billede af en skov oppe fra">
                 <h2>service</h2>
-            </div>
-            <div><img src="/images/kontaktos.jpg" alt="">
+            </a>
+            <a href="#kontakt-os"><img src="/images/kontaktos.jpg" alt="billede af en bjerg skove">
                 <h2>kontakt os</h2>
-            </div>
+            </a>
 
         </div>
         <div class="full-bleed">
@@ -96,7 +96,7 @@
             </section>
         </div>
 
-        <div class="flex-1-1">
+        <div class="flex-1-1" id="kontakt-os">
             <section>
                 <h2>get in touch</h2>
                 <p><strong>We are awwwards and we are here to serve! <br> How can we help you?
@@ -109,11 +109,26 @@
                 </p>
             </section>
             <form>
+                <div class="group">
+                    <label for="name">Dit navn <br>
+                        <span>fornavn og efternavn</span>
 
-                <input type="text" name="f-name" id="f-name" placeholder="dit navn*">
-                <input type="number" name="tlf" id="tlf" placeholder="telefonnummer*">
-                <input type="email" name="email" id="email" placeholder="din email*">
-                <textarea id="message" name="message" rows="2" cols="5">Eventuel besked*
+                    </label>
+
+                    <input type="text" name="name" id="name" placeholder="dit navn*" required>
+                </div>
+                <div class="group">
+                    <label for="tlf-number">Dit telefonnummer</label>
+                    <input type="tlf" name="tlf" id="tlf-number" placeholder="telefonnummer*" required>
+                </div>
+                <div class="group">
+                    <label for="email">Din email <br>
+                        <span>skal indeholde @</span>
+                    </label>
+
+                    <input type="email" name="email" id="email" placeholder="din email*" required>
+                </div>
+                <textarea id="message" name="message" rows="2" cols="5">Eventuel besked
                     </textarea>
                 <button type="submit" class="btn-sort">kontakt os</button>
 
@@ -140,10 +155,10 @@
                         Lørdag: 10.00 – 15.00
                     </li>
                     <li>
-                        <img src="/images/facebook-ikon-hvid.png" alt="">
-                        <img src="/images/instagram-ikon-hvid.png" alt="">
-                        <img src="/images/pinterest-ikon-hvid.png" alt="">
-                        <img src="/images/linkedin-ikon-hvid.png" alt="">
+                        <a href="#"> <img src="/images/facebook-ikon-hvid.png" alt="logo af facebook icon"></a>
+                        <a href="#"> <img src="/images/instagram-ikon-hvid.png" alt="logo af instagram icon"></a>
+                        <a href="#"> <img src="/images/pinterest-ikon-hvid.png" alt="logo af pinterest icon"></a>
+                        <a href="#"> <img src="/images/linkedin-ikon-hvid.png" alt="logo af linkedin icon"></a>
                     </li>
                 </ul>
             </section>
@@ -186,6 +201,8 @@
             </section>
         </nav>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 
 </html>

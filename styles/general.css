@@ -83,7 +83,8 @@ h5 {
   font-size: var(--fluid-h5);
 }
 h6,
-lh {
+lh,
+label {
   font-size: var(--fluid-h6);
 }
 
@@ -131,7 +132,8 @@ h4 {
 }
 
 h5,
-h6 {
+h6,
+label {
   --flow-space: 0.5rlh;
 }
 
@@ -146,6 +148,9 @@ button {
 /* header */
 
 header {
+  position: sticky;
+  top: 0;
+  z-index: 1;
   background: var(--hvid);
   padding: var(--even-p-xs) 0;
 
@@ -156,7 +161,7 @@ header {
 
     gap: 1rem;
 
-    & img {
+    & .logo img {
       width: 115px;
       height: auto;
       object-fit: contain;
@@ -263,7 +268,7 @@ main {
     flex: 1 1 250px;
   }
 
-  & div {
+  & a {
     position: relative;
 
     & img {
@@ -366,6 +371,27 @@ form {
   flex: 1 1 auto;
   & button {
     align-self: flex-end;
+  }
+
+  & label {
+    font-weight: bold;
+
+    & span {
+      color: var(--sort);
+      font-weight: normal;
+      font-size: medium;
+      text-transform: capitalize;
+    }
+  }
+
+  & .group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    &:focus-within span {
+      font-weight: bold;
+    }
   }
 }
 
