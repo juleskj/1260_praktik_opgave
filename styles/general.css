@@ -1,9 +1,11 @@
 :root {
   --content-width: min(1300px, 100% - 1rem * 2);
   --full-width: minmax(1rem, 1fr);
-  --feature-width: minmax(0, 2rem);
+  --smooth-transition: 0.2s ease, transform 0.2s ease;
+
   --flow-space: 0.5rlh;
   --border-radius: 10px;
+  --nav-height: auto;
 
   /* padding */
   --small-p: 4px 16px;
@@ -147,62 +149,152 @@ button {
 
 /* header */
 
+@media (max-width: 799px) {
+  /* menu når mobil */
+
+  #menu_toggle {
+    opacity: 0;
+    width: 0;
+    height: 0;
+    /* menu kanp når den er checked  */
+    &:checked ~ nav {
+      left: 0;
+    }
+  }
+
+  .menu_knap {
+    position: absolute;
+    top: 50%;
+    right: 0%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+  }
+
+  .line1,
+  .line2 {
+    width: 30px;
+    height: 1px;
+    background-color: var(--sort);
+    margin: 3px 0;
+    transition: var(--smooth-transition);
+  }
+
+  .line1 {
+    transform-origin: center left;
+  }
+  .line2 {
+    transform-origin: right;
+  }
+
+  .menu_knap:is(:checked, :hover, :focus) .line1 {
+    transform: rotate(45deg) translate(0px, -6px);
+  }
+
+  .menu_knap:is(:checked, :hover, :focus) .line2 {
+    transform: rotate(-45deg) translate(5px, -11px);
+  }
+
+  /* nav når mobil */
+
+  .hamburger_menu nav {
+    position: fixed;
+    display: flex;
+    flex-flow: column;
+    gap: 2rem;
+
+    top: var(--nav-height);
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    padding: 80px 0;
+    background-color: var(--hvid);
+    transition: var(--smooth-transition);
+    padding: var(--even-p-xs);
+  }
+}
+
 header {
-  background: var(--hvid);
+  position: sticky;
+  top: 0;
+  z-index: 1;
+
+  height: var(--nav-height);
+  background-color: var(--hvid);
   padding: var(--even-p-xs) 0;
 
-  & nav {
-    display: grid;
-    grid-template-columns: 1fr;
-    justify-items: start;
+  & .logo img {
+    display: block;
+    width: fit-content;
 
-    gap: 1rem;
+    max-width: 115px;
+    height: auto;
+    object-fit: contain;
+  }
 
-    & .logo img {
-      width: 115px;
-      height: auto;
-      object-fit: contain;
-    }
+  & ul {
+    display: contents;
+  }
 
-    & ul {
-      display: contents;
-      & li {
-        list-style-type: none;
+  & li {
+    list-style-type: none;
+    width: fit-content;
 
-        width: fit-content;
-        & a {
-          text-decoration: none;
-          text-transform: capitalize;
+    & a {
+      text-decoration: none;
+      text-transform: capitalize;
 
-          border-radius: var(--border-radius);
-          padding: 5px var(--even-p-xs);
+      border-radius: var(--border-radius);
+      padding: 5px var(--even-p-xs);
 
-          color: var(--sort);
-          border-radius: var(--border-radius);
+      color: var(--sort);
+      border-radius: var(--border-radius);
+      transition: var(--smooth-transition);
 
-          &:is(:hover, :focus) {
-            transition: 200ms;
-            outline-offset: 2px;
-            outline: var(--sort) 2px solid;
-          }
-        }
+      &:is(:hover, :focus) {
+        outline-offset: 2px;
+        outline: var(--sort) 2px solid;
       }
     }
   }
 }
 
 @media (min-width: 800px) {
+  /* menu når desktop */
   header {
-    position: sticky;
-    top: 0;
-    z-index: 1;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+  }
+
+  .hamburger_menu {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-evenly;
+    align-items: center;
+
     & nav {
-      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-      justify-items: center;
+      display: flex;
+      flex-flow: row wrap;
       align-items: center;
       justify-content: space-between;
-      align-content: center;
+      gap: 1rem;
     }
+  }
+
+  /* menu */
+  #menu_toggle,
+  .hamburger-menu label,
+  .hamburger-menu input {
+    display: none;
   }
 }
 
@@ -272,7 +364,7 @@ main {
 
   & a {
     position: relative;
-    transition: 0.2s ease, transform 0.2s ease;
+    transition: var(--smooth-transition);
     &:is(:hover, :focus) {
       flex: 1 2 400px;
     }
@@ -432,7 +524,8 @@ button {
 
   border-radius: var(--border-radius);
   padding: 10px var(--even-p-s);
-  transition: 0.2s ease, transform 0.2s ease;
+  transition: var(--smooth-transition);
+
   &:is(:hover, :focus) {
     outline-offset: 2px;
     outline: var(--sort) 2px solid;
