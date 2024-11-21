@@ -148,9 +148,6 @@ button {
 /* header */
 
 header {
-  position: sticky;
-  top: 0;
-  z-index: 1;
   background: var(--hvid);
   padding: var(--even-p-xs) 0;
 
@@ -196,6 +193,9 @@ header {
 
 @media (min-width: 800px) {
   header {
+    position: sticky;
+    top: 0;
+    z-index: 1;
     & nav {
       grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
       justify-items: center;
@@ -207,7 +207,9 @@ header {
 }
 
 /* main */
+
 main {
+  position: relative;
   background: var(--gul);
 }
 
@@ -270,10 +272,14 @@ main {
 
   & a {
     position: relative;
+    transition: 0.2s ease, transform 0.2s ease;
+    &:is(:hover, :focus) {
+      flex: 1 2 400px;
+    }
 
     & img {
       width: 100%;
-      height: 100%;
+      height: 80vh;
       object-fit: cover;
       object-position: center;
     }
@@ -426,9 +432,8 @@ button {
 
   border-radius: var(--border-radius);
   padding: 10px var(--even-p-s);
-
+  transition: 0.2s ease, transform 0.2s ease;
   &:is(:hover, :focus) {
-    transition: 200ms;
     outline-offset: 2px;
     outline: var(--sort) 2px solid;
   }
